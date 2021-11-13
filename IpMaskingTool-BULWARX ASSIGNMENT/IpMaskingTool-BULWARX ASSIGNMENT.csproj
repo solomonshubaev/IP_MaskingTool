@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>IpMaskingTool_BULWARX_ASSIGNMENT</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="MaskingIP">
+      <HintPath>..\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

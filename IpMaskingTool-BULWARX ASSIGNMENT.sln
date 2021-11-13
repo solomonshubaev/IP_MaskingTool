@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpMaskingTool-BULWARX ASSIGNMENT", "IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT.csproj", "{9B23BA7B-5253-409C-8FDD-E10985168084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaskingIP", "MaskingIP\MaskingIP.csproj", "{743F6034-5306-4DD1-9715-EC0123281BF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B23BA7B-5253-409C-8FDD-E10985168084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B23BA7B-5253-409C-8FDD-E10985168084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B23BA7B-5253-409C-8FDD-E10985168084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B23BA7B-5253-409C-8FDD-E10985168084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743F6034-5306-4DD1-9715-EC0123281BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743F6034-5306-4DD1-9715-EC0123281BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743F6034-5306-4DD1-9715-EC0123281BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743F6034-5306-4DD1-9715-EC0123281BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33A6B9AE-AEF4-43E2-91CB-E4B6B985B5A6}
+	EndGlobalSection
+EndGlobal

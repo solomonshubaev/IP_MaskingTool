@@ -1,0 +1,10 @@
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\bin\Debug\netcoreapp3.1\MaskingIP.deps.json
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\bin\Debug\netcoreapp3.1\MaskingIP.dll
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\bin\Debug\netcoreapp3.1\MaskingIP.pdb
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.csproj.AssemblyReference.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.AssemblyInfoInputs.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.AssemblyInfo.cs
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.csproj.CoreCompileInputs.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.dll
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\MaskingIP\obj\Debug\netcoreapp3.1\MaskingIP.pdb

@@ -1,0 +1,17 @@
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.exe
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.deps.json
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.runtimeconfig.json
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.runtimeconfig.dev.json
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.dll
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.pdb
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.csproj.AssemblyReference.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.AssemblyInfoInputs.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.AssemblyInfo.cs
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.csproj.CoreCompileInputs.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.dll
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.pdb
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.genruntimeconfig.cache
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\MaskingIP.dll
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\obj\Debug\netcoreapp3.1\IpMaskingTool-BULWARX ASSIGNMENT.csproj.CopyComplete
+C:\Users\solom\source\repos\IpMaskingTool-BULWARX ASSIGNMENT\IpMaskingTool-BULWARX ASSIGNMENT\bin\Debug\netcoreapp3.1\MaskingIP.pdb
