@@ -64,39 +64,6 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
             return this.readedText;
         }
 
-        private int GetFileNamePartsAmount(int lengthOfArr)
-        {
-            return lengthOfArr;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ip"></param>
-        /// <returns>True if the ip is valid</returns>
-        private bool IsValidIP(string ip)
-        {
-            string[] ipParts = ip.Split('.');
-            foreach(string part in ipParts)
-            {
-                if (this.IsStringStartWithZero(part))
-                    return false;
-            }
-            return true;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns>True if string start with "0" and no more characters after it</returns>
-        private bool IsStringStartWithZero(string str)
-        {
-            if (str == string.Empty)
-                throw new Exception("str is empty");
-            return str[0] == '0' && str.Length > 1;
-        }
-
         /// <summary>
         /// Replacing input file name to output file name
         /// </summary>
