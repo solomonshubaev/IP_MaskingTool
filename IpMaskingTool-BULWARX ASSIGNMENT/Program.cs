@@ -6,11 +6,10 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Your file input(Default type is .txt): ");
+            Console.WriteLine("Enter Your file path or drag file to console.");
             string userInput = Console.ReadLine();
             FileManager fileManager = new FileManager(userInput);
             fileManager.CreateNewFileAfterIpMask();
-
         }
     }
 }

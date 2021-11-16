@@ -12,51 +12,32 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
         private const string FILE_TYPE_TEXT = ".txt";
         private const string OUTPUT_FILE_NAME = "outputFile" + FILE_TYPE_TEXT;
 
-        private readonly string inputFileName;
         private string readedText;
         private string filePath;
-        private MaskIp maskIp;
-        public FileManager(string inputFileName)
+        private int maxFileLength;
+        public FileManager(string filePath, int maxFileLength = 5000000)
         {
+            this.maxFileLength = maxFileLength;
             this.readedText = "";
-            string currentPath = Directory.GetCurrentDirectory();
-            this.filePath = Directory.GetParent(currentPath).Parent.Parent.FullName + "/";
-            this.inputFileName = inputFileName;
-            this.maskIp = new MaskIp();
-            try
-            {
-                if (!this.IsFileNameHasType())
-                    this.inputFileName += FILE_TYPE_TEXT; // add .txt to file name
-                ReadFromFile();
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }            
+            this.filePath = filePath;
+            ReadFromFile();
         }
 
         
 
         public void ReadFromFile()
         {
-            StringBuilder stringBuilder = new StringBuilder(this.filePath);
-            stringBuilder.Append(this.inputFileName);
-            string finalFilePath = stringBuilder.ToString();
             try
             {
-                if (File.Exists(finalFilePath))
-                    this.readedText = File.ReadAllText(finalFilePath); 
+                this.filePath = RemoveApostrophes(this.filePath);
+                if (File.Exists(this.filePath))
+                {
+                    if (IsFileSizeValid() && IsFileExtensionValid()) //check if input is valid
+                        this.readedText = File.ReadAllText(this.filePath);
+                }
                 else
                     Console.WriteLine("File not found");
-            }
-            catch(PathTooLongException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            catch(UnauthorizedAccessException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            }         
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -67,8 +48,10 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
         {
             try
             {
-                ReplaceIpInString(Definitions.IP4_REGEX);
-                File.WriteAllText(this.filePath + OUTPUT_FILE_NAME, this.readedText);
+                StringMaskingClass stringMasking = new StringMaskingClass(readedText);
+                stringMasking.ReplaceMatchingStringInString(Definitions.IP4_REGEX);
+                string outputPath = GetOutputPathString(this.filePath);
+                File.WriteAllText(outputPath, stringMasking.Text);
             }
             catch(Exception e)
             {
@@ -76,49 +59,9 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
             }
         }
 
-        /// <summary>
-        /// Replacing valid IPs in the log file
-        /// </summary>
-        /// <param name="regexPattern"></param>
-        public void ReplaceIpInString(string regexPattern)
-        {
-            Regex regex = new Regex(regexPattern);
-            StringBuilder stringBuilder = new StringBuilder(this.readedText);
-            if (regex.IsMatch(this.readedText))
-            {
-                MatchCollection matchCollection = regex.Matches(this.readedText);
-                foreach (Match match in matchCollection)
-                {
-                    if (this.IsValidIP(match.Value)) //check if matched ip is valid
-                    {
-                        string maskedIp = this.maskIp.CalculateMaskedIP(match.Value);
-                        stringBuilder.Replace(match.Value, maskedIp);
-                        this.readedText = stringBuilder.ToString();
-                    }
-                }
-                Console.WriteLine("IP addresses replaced");
-            }
-        }
-
         public override string ToString()
         {
             return this.readedText;
-        }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns>True if file is valid</returns>
-        private bool IsFileNameHasType()
-        {
-            string[] fileParts = this.inputFileName.Split('.');
-            if (this.GetFileNamePartsAmount(fileParts.Length) == 2) //(name | type)
-                return true;
-            else if (this.GetFileNamePartsAmount(fileParts.Length) == 1)
-                return false;
-            else
-                throw new Exception("Invalid File Input");
         }
 
         private int GetFileNamePartsAmount(int lengthOfArr)
@@ -152,6 +95,85 @@ namespace IpMaskingTool_BULWARX_ASSIGNMENT
             if (str == string.Empty)
                 throw new Exception("str is empty");
             return str[0] == '0' && str.Length > 1;
+        }
+
+        /// <summary>
+        /// Replacing input file name to output file name
+        /// </summary>
+        /// <param name="fullPath"></param>
+        /// <param name="outputFileName">File's new name</param>
+        /// <param name="combineToOriginalFileName">Combine the name and add it to input file's name</param>
+        /// <returns>New path with new file string</returns>
+        private string GetOutputPathString(string fullPath
+            ,string outputFileName = "OUTPUT",bool combineToOriginalFileName = false)
+        {
+            try
+            {
+                string path;
+                if (combineToOriginalFileName)
+                {
+                    path = Path.GetFileNameWithoutExtension(fullPath);
+                }
+                else
+                {
+                    path = Directory.GetParent(fullPath).ToString();
+                }
+
+                path = Path.Combine(path, outputFileName);
+                return Path.ChangeExtension(path, ".log");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            throw new Exception("ERROR IN GetOutputPathString");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns>True if string between " "</returns>
+        private bool CheckIfStringInsideApostrophes(string str)
+        {
+            return str[0] == '"' || str[str.Length - 1] == '"';
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns>New string without ""</returns>
+        private string RemoveApostrophes(string str)
+        {
+            if (CheckIfStringInsideApostrophes(str))
+                //str = str.Trim('"');
+                str = str.Substring(1,str.Length-2);
+            return str;
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>True if file length is smaller or equal to max length</returns>
+        private bool IsFileSizeValid()
+        {
+            long fileSize = new FileInfo(this.filePath).Length;
+            if (fileSize <= this.maxFileLength)
+                return true;
+            throw new Exception("File size is too big. max size is " + this.maxFileLength + " (Bytes)");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>True if extension is *.log</returns>
+        private bool IsFileExtensionValid()
+        {
+            if (Path.GetExtension(this.filePath) == ".log")
+                return true;
+            throw new Exception("Invalid file input: only file with extension .log are valid.");
         }
     }
 }
